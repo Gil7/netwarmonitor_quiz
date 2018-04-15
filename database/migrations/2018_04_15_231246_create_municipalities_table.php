@@ -16,7 +16,6 @@ class CreateMunicipalitiesTable extends Migration
         Schema::create('municipalities', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');            
-
             //foreign key
             $table->integer('state_id')->unsigned();
             $table->foreign('state_id')->references('id')->on('states');
