@@ -12,8 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('auth.login');
+})->middleware('guest');
 
 Auth::routes();
 
@@ -36,4 +36,10 @@ Route::resource('appointments', 'AppointmentsController');
 //STATES
 Route::resource('states', 'StatesController');
 
+//ABOUT
+Route::get('about-me', 'AboutController@index');
+//USERS
+Route::get('profile', 'UsersController@profile');
+Route::get('getMyProfile', 'UsersController@getMyProfile');
+Route::put('users/{id}', 'UsersController@update');
 

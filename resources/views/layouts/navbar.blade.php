@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Gilberto Méndez
+                    NetwarMonitor
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -20,12 +20,15 @@
                             <li><a class="nav-link" href="{{ route('login') }}">Iniciar sesón</a></li>
                             <li><a class="nav-link" href="{{ route('register') }}">Registrate</a></li>
                         @else
+                            <li><a class="nav-link" href="/contacts">Contactos</a></li>
+                            <li><a class="nav-link" href="/appointments">Citas</a></li>
+                            <li><a class="nav-link" href="/about-me">Acerca de</a></li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}">
+                                    <a class="dropdown-item" href="{{ url('/profile') }}">
                                        
                                         Mi perfil <i class="fa fa-user"></i>
                                     </a>

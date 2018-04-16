@@ -1,3 +1,15 @@
 .white-text{
     color : white;
 }
+.graphics{
+    position:fixed !important;
+	width:60px !important;
+	height:60px !important;
+	bottom:40px !important;
+	right:40px !important;
+	
+	color:#FFF !important;
+	border-radius:50px !important;
+	text-align:center !important;
+	box-shadow: 2px 2px 3px #999 !important;
+}
