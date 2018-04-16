@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Appointment;
 use Validator;
+use Auth;
 class AppointmentsController extends Controller
 {
     /**
@@ -52,6 +53,7 @@ class AppointmentsController extends Controller
         }
         else {
             $appointment = new Appointment();
+            $appointment->user_id = Auth::id();
             $appointment->subject = $request->input("subject");
             $appointment->status = $request->input("status");
             $appointment->date_to_attend = $request->input("date_to_attend");
