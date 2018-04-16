@@ -201,7 +201,7 @@ $(document).ready(function () {
                     title: "Lista de citas",
                     text: 'Excel <i class="fa fa-file-excel-o"></i> ',
                     titleAttr: 'Excel',
-                    className: 'btn btn-success btn-xs pull-right',
+                    className: 'btn btn-success btn-xs pull-left',
                     exportOptions: {
                         columns: [0, 1, 2, 3, 4, 5]
                     }
@@ -211,7 +211,7 @@ $(document).ready(function () {
                     title: "Lista de citas",
                     text: 'CSV <i class="fa fa-file-text-o"></i> ',
                     titleAttr: 'CSV',
-                    className: 'btn btn-success btn-xs pull-right',
+                    className: 'btn btn-success btn-xs pull-left',
                     exportOptions: {
                         columns: [0, 1, 2, 3, 4, 5]
                     }
@@ -219,9 +219,9 @@ $(document).ready(function () {
                 {
                     extend: 'pdfHtml5',
                     title: "Lista de citas",
-                    text: 'PDF <i class="fa fa-file-pdf"></i> ',
+                    text: 'PDF <i class="fa fa-file-pdf-o"></i> ',
                     titleAttr: 'pdf',
-                    className: 'btn btn-danger btn-xs pull-right',
+                    className: 'btn btn-danger btn-xs pull-left',
                     exportOptions: {
                         columns: [0, 1, 2, 3, 4, 5]
                     },
@@ -237,8 +237,8 @@ $(document).ready(function () {
                 "infoFiltered": "(filtrado de _MAX_ resultados)",
                 "search": "Buscar cita: ",
                 "paginate": {
-                    "previous": " < Pagina previa ",
-                    "next": " Siguiente pagina > "
+                    "previous": " <i class='fa fa-arrow-circle-left'></i> ",
+                    "next": " <i class='fa fa-arrow-circle-right'></i> "
                 }
 
             },

@@ -13,7 +13,7 @@
     <button id="filter" class="btn btn-sm btn-info"><i class="fa fa-filter"></i> Filtrar</button>
 </form>
 <div class="row">
-    <button data-option="create" class="show_modal btn btn-primary" data-toggle="modal" data-target="#appointment-modal"><i class="fa fa-plus"></i> Agregar</button>
+    <button style="margin:15px;" data-option="create" class="show_modal btn btn-primary" data-toggle="modal" data-target="#appointment-modal"><i class="fa fa-plus"></i> Agregar</button>
     <div class="col-md-12">
         <table style="margin-top:15px" class="table table-hover table-striped" id="table_appointments">
             <thead>
