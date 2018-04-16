@@ -8,7 +8,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/">NetwarMonitor</a>
+            <a class="navbar-brand" href="/">
+            
+            <img style="height:35px;" class="img-circle" src="http://www.formulaenlosnegocios.com.mx/wp-content/uploads/2015/08/11666094_885785561494774_995205435467677753_n.jpg">
+            
+            </a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
