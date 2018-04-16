@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Contact;
+use Auth;
+use Validator;
 class ContactsController extends Controller
 {
     /**
@@ -44,6 +46,7 @@ class ContactsController extends Controller
         }
         else {
             $contact = new Contact();
+            $contact->user_id = Auth::id();
             $contact->name = $request->input("name");
             $contact->lastname = $request->input("lastname");
             $contact->email = $request->input("email");

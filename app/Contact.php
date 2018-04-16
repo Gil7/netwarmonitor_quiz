@@ -25,7 +25,7 @@ class Contact extends Model
     public static function getMyContacts(){
         $current_user = Auth::user()->id;
         $contacts = DB::select(DB::raw(
-            "SELECT c.*, s.name as state_name, m.name as municipality_name from contacts as c 
+            "SELECT c.*, s.name as state_name, m.name as municipality_name, s.id as state_id from contacts as c 
             INNER JOIN municipalities as m on m.id = c.municipality_id 
             INNER JOIN states s on s.id = m.state_id
             WHERE c.user_id = $current_user

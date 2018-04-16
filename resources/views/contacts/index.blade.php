@@ -18,9 +18,9 @@
         </thead>
 
 </table>
-
+@include('contacts.modal')
 @endsection
 
 @section('extra-js')
-    <!--script src="/js/contacts.js"></script-->
+    <script src="/js/contacts/contacts.js"></script>
 @endsection
