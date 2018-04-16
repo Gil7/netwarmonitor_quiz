@@ -33,7 +33,7 @@ class Appointment extends Model
         return $myAppointments;
     }
     public static function between($from, $to){
-        $current_user = Auth::user()->id;
+        $current_user = Auth::id();
         $appointments = DB::select(DB::raw(
             "SELECT a.*,c.id as 'contact_id', c.name as  contact_name from appointments a  
             INNER JOIN contacts c ON a.contact_id = c.id
@@ -43,14 +43,13 @@ class Appointment extends Model
     }
     public static function averages(){
         $current_month = date('Y-m');
-        $current_user = Auth::user()->id;
+        $current_user = Auth::id();
         $averages = DB::select(DB::raw(
             "SELECT a.status, count(status) as total from appointments a
             where a.user_id = $current_user
             AND a.date_to_attend between '$current_month-01' AND '$current_month-31'
             group by a.status"
         ));
-
         return $averages;
     }
 }
