@@ -8,6 +8,9 @@ use Validator;
 use Auth;
 class AppointmentsController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');//refirect if the user is not logged in
+    }
     /**
      * Display a listing of the resource.
      *
