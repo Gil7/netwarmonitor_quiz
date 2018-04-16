@@ -16,7 +16,12 @@ class ContactsController extends Controller
         return view('contacts.index');
     }
 
-    
+    public function getMyContacts(Request $request){
+        
+        $contacts = Contact::getMyContacts();
+
+        return response()->json(['data' => $contacts]);
+    }
 
     /**
      * Store a newly created resource in storage.

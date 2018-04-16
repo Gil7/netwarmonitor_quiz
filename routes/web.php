@@ -22,7 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 //CONTACTS 
-Route::get('allcontacts', 'ContactsController@all_contacts');
+Route::get('allcontacts', 'ContactsController@getMyContacts');
 Route::resource('contacts', 'ContactsController');
 //ABOUT
 Route::post('send-mail','AboutController@sendMail');

@@ -26,8 +26,8 @@ class Contact extends Model
         $current_user = Auth::user()->id;
         $contacts = DB::select(DB::raw(
             "SELECT c.*, s.name as state_name, m.name as municipality_name from contacts as c 
-            INER JOIN states as s on c.state_id = s.id
             INNER JOIN municipalities as m on m.id = c.municipality_id 
+            INNER JOIN states s on s.id = m.state_id
             WHERE c.user_id = $current_user
             ORDER BY c.id DESC"
         ));
