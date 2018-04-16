@@ -1,5 +1,5 @@
 .white-text{
-    color : white;
+    color : white !important;
 }
 .graphics{
     position:fixed !important;
@@ -12,4 +12,7 @@
 	border-radius:50px !important;
 	text-align:center !important;
 	box-shadow: 2px 2px 3px #999 !important;
+}
+.black{
+	background: #101010 !important;
 }

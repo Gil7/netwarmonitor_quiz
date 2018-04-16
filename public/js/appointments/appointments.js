@@ -51,6 +51,7 @@ $(document).ready(function () {
                     swal(data.message, {
                         icon: "success",
                     });
+                    $("#appointment-modal").modal('hide')
                 }
                 else {
                     //display some error message
@@ -232,7 +233,7 @@ $(document).ready(function () {
             "language": {
                 "lengthMenu": "Mostrar _MENU_ resultados por pagina",
                 "zeroRecords": "No se ha encontado citas registradas",
-                "info": "Mostrando pagina _PAGE_ de _PAGES_",
+                "info": "",
                 "infoEmpty": "No hay resultados disponibles",
                 "infoFiltered": "(filtrado de _MAX_ resultados)",
                 "search": "Buscar cita: ",

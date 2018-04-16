@@ -250,7 +250,7 @@ $(document).ready(function () {
             "language": {
                 "lengthMenu": "Mostrar _MENU_ resultados por pagina",
                 "zeroRecords": "No se han encontrado contactos registrados",
-                "info": "Mostrando página _PAGE_ de _PAGES_",
+                "info": "",
                 "infoEmpty": "No hay resultados disponibles",
                 "infoFiltered": "(filtrado de _MAX_ resultados)",
                 "search": "Buscar contacto: ",

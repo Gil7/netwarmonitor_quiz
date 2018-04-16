@@ -1,50 +1,58 @@
-<nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    NetwarMonitor
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
-                            <li><a class="nav-link" href="{{ route('login') }}">Iniciar sesón</a></li>
-                            <li><a class="nav-link" href="{{ route('register') }}">Registrate</a></li>
-                        @else
-                            <li><a class="nav-link" href="/contacts">Contactos</a></li>
-                            <li><a class="nav-link" href="/appointments">Citas</a></li>
-                            <li><a class="nav-link" href="/about-me">Acerca de</a></li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ url('/profile') }}">
-                                       
-                                        Mi perfil <i class="fa fa-user"></i>
-                                    </a>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" 
+            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">NetwarMonitor</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                @guest
+                    <li class=""><a class="nav-link" href="{{ route('login') }}">Iniciar sesión</a></li>
+                    <li><a class="nav-link" href="{{ route('register') }}">Registrate</a></li>
+                @else
+                    <li class="">
+                        <a href="/contacts">Contactos</a>
+                    </li>
+                    <li class="">
+                        <a href="/appointments">Citas</a>
+                    </li>
+                    <li class="">
+                        <a href="/about-me">Acerca de</a>
+                    </li>
+                    <ul class="nav navbar-nav pull-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                            aria-haspopup="true" aria-expanded="false"> {{ Auth::user()->name }}  <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/profile"><i class="fa fa-user"></i> Mi Perfil </a></li>
+                                <li role="separator" class="divider"></li>
+                                <li>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                        Salir <i class="fa fa-power-off"></i>
+                                        <i class="fa fa-power-off"></i> Salir
                                     </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
-                                </div>
-                            </li>
-                        @endguest
+                                </li>
+                            </ul>
+                        </li>
+                        
                     </ul>
-                </div>
-            </div>
-        </nav>
+                    
+                @endguest
+            </ul>
+            
+        </div>
+
+    </div>
+
+</nav>
